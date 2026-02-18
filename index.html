@@ -12,7 +12,7 @@
       --text: #000000;
       --muted: #444;
       --border: #000;
-      --button-bg: #f2f2f2;
+      --btn-bg: #f3f3f3;
     }
 
     [data-theme="dark"] {
@@ -20,7 +20,7 @@
       --text: #e5e7eb;
       --muted: #9ca3af;
       --border: #374151;
-      --button-bg: #1f2933;
+      --btn-bg: #1f2937;
     }
 
     body {
@@ -30,51 +30,30 @@
       color: var(--text);
       line-height: 1.5;
       font-size: 14px;
-      transition: background 0.2s ease, color 0.2s ease;
+      transition: all 0.2s ease;
     }
 
-    h1 {
-      font-size: 26px;
-      margin-bottom: 5px;
-    }
-
+    h1 { font-size: 26px; margin-bottom: 5px; }
     h2 {
       font-size: 16px;
       margin-top: 22px;
       margin-bottom: 6px;
       border-bottom: 1px solid var(--border);
     }
-
-    h3 {
-      font-size: 14px;
-      margin: 10px 0 2px;
-    }
-
-    p {
-      margin: 4px 0;
-    }
-
-    ul {
-      margin: 6px 0 10px 18px;
-    }
-
-    li {
-      margin-bottom: 4px;
-    }
-
-    .muted {
-      font-size: 13px;
-      color: var(--muted);
-    }
+    h3 { font-size: 14px; margin: 10px 0 2px; }
+    p { margin: 4px 0; }
+    ul { margin: 6px 0 10px 18px; }
+    li { margin-bottom: 4px; }
+    .muted { font-size: 13px; color: var(--muted); }
 
     .theme-toggle {
       position: fixed;
       top: 20px;
       right: 20px;
-      background: var(--button-bg);
-      border: 1px solid var(--border);
-      color: var(--text);
       padding: 6px 10px;
+      border: 1px solid var(--border);
+      background: var(--btn-bg);
+      color: var(--text);
       cursor: pointer;
       font-size: 12px;
       border-radius: 4px;
@@ -94,20 +73,20 @@
 
 <h2>Professional Summary</h2>
 <p>
-  Team Lead and Senior Full Stack Developer with 8+ years of experience in designing,
-  developing, and scaling web applications using NodeJS, NestJS, ReactJS, and TypeScript.
-  Proven expertise in leading remote teams, backend architecture, cloud deployments,
-  and delivering high-quality, production-ready systems. Strong experience with AWS,
-  GCP, microservices, REST APIs, and database design.
+  Team Lead and Senior Full Stack Developer with 8+ years of experience building
+  scalable, secure, and high-performance applications. Strong expertise in NodeJS,
+  NestJS, ReactJS, TypeScript, and cloud platforms (AWS & GCP). Proven ability to lead
+  remote teams, own system architecture, modernize legacy platforms, and deliver
+  business-critical products end-to-end.
 </p>
 
 <h2>Technical Skills</h2>
 <p>
-  <strong>Languages & Frameworks:</strong> JavaScript, TypeScript, NodeJS, NestJS, ReactJS, NextJS<br/>
-  <strong>Databases:</strong> MySQL, MongoDB, FaunaDB<br/>
+  <strong>Languages & Frameworks:</strong> JavaScript, TypeScript, NodeJS, NestJS, ReactJS, NextJS, Express<br/>
+  <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, FaunaDB<br/>
   <strong>Cloud & DevOps:</strong> AWS (Lambda, EC2, S3, Elastic Beanstalk, SQS, SNS), GCP, Docker, Serverless<br/>
-  <strong>Tools & Practices:</strong> Git, Jira, REST APIs, Microservices, JWT, OAuth, CI/CD, Unit Testing (Jest, Mocha)<br/>
-  <strong>Leadership:</strong> Team Management, Code Reviews, Architecture Design, Mentoring, Agile/Scrum
+  <strong>Architecture & Practices:</strong> REST APIs, Microservices, JWT, OAuth, CI/CD, Jest, Mocha<br/>
+  <strong>Leadership:</strong> Team Leadership, Dev-Side Product Ownership, Code Reviews, Mentoring, Agile/Scrum
 </p>
 
 <h2>Professional Experience</h2>
@@ -115,27 +94,92 @@
 <h3>Team Lead</h3>
 <p class="muted">Deel | Remote | Mar 2025 – Present</p>
 <ul>
-  <li>Leading redevelopment of AstutePayroll product using PERN stack (PostgreSQL, Express.js, ReactJS, NodeJS).</li>
-  <li>Owning development-side product leadership including architecture, feature planning, and delivery.</li>
-  <li>Driving modernization of legacy payroll systems with scalable, secure, and maintainable design.</li>
-  <li>Mentoring engineers, conducting code reviews, and enforcing coding and architectural standards.</li>
-  <li>Collaborating with product managers, QA, and stakeholders in a fully remote setup.</li>
+  <li>Leading redevelopment of AstutePayroll platform using PERN stack (PostgreSQL, Express, ReactJS, NodeJS).</li>
+  <li>Acting as development-side product owner driving architecture, feature planning, and execution.</li>
+  <li>Modernizing legacy payroll systems for scalability, performance, and compliance readiness.</li>
+  <li>Mentoring engineers, conducting code reviews, and enforcing coding standards.</li>
+  <li>Collaborating with product, QA, and stakeholders in a fully remote environment.</li>
 </ul>
 
 <h3>Senior Software Engineer</h3>
 <p class="muted">Vendavo | Remote | May 2024 – Mar 2025</p>
+<ul>
+  <li>Worked on Rebate and Channel Management (RCM) platform.</li>
+  <li>Improved payment processing, parallel execution, and billback automation.</li>
+  <li>Resolved critical production issues and optimized system performance.</li>
+  <li>Contributed to architectural decisions and coding standardization.</li>
+</ul>
+
+<h3>Senior Software Engineer</h3>
+<p class="muted">32Co | Remote (London) | Jun 2022 – Mar 2024</p>
+<ul>
+  <li>Backend development using NestJS and NodeJS for healthcare platforms.</li>
+  <li>Designed scalable APIs and database schemas.</li>
+  <li>Worked on AWS Lambda and serverless infrastructure.</li>
+</ul>
+
+<h3>Team Lead | Principal Software Engineer</h3>
+<p class="muted">Spacecode Technologies | Remote (Geneva) | Nov 2017 – Jun 2022</p>
+<ul>
+  <li>Led development of multiple enterprise products across healthcare, jewelry, and finance domains.</li>
+  <li>Designed RFID & IoT-based systems with backend services and dashboards.</li>
+  <li>Owned system architecture, database design, and delivery timelines.</li>
+  <li>Managed cross-functional teams and client communication.</li>
+</ul>
+
+<h3>Software Engineer</h3>
+<p class="muted">Atologist Technologies | Surat | Sep 2016 – Oct 2017</p>
+
+<h3>Software Engineer</h3>
+<p class="muted">Azilen Technologies Pvt. Ltd | Ahmedabad | May 2016 – Aug 2016</p>
+
+<h2>Projects</h2>
+<ul>
+  <li>
+    <strong>AstutePayroll (Deel):</strong> Redeveloping payroll platform using PERN stack.
+    Leading architecture, feature planning, and execution from development side.
+  </li>
+  <li>
+    <strong>Rebate & Channel Management (Vendavo):</strong> NodeJS, EXTJS, MySQL, MongoDB –
+    enterprise-grade rebate and payout management system.
+  </li>
+  <li>
+    <strong>32Co Platform:</strong> NestJS, ReactJS, AWS Lambda – clinician enablement platform.
+  </li>
+  <li>
+    <strong>BloodSpace Visibility:</strong> RFID-based blood bank tracking system using NestJS, MongoDB, GCP.
+  </li>
+  <li>
+    <strong>JewelTrace & Infinity Visibility:</strong> Inventory and loan value tracking systems.
+  </li>
+</ul>
 
 <h2>Education</h2>
 <p>
   <strong>Master of Computer Application (2016)</strong><br/>
   Gujarat Technical University, Ahmedabad
 </p>
+<p>
+  <strong>Bachelor of Computer Application (2014)</strong><br/>
+  MKBHU, Bhavnagar
+</p>
+
+<h2>Certifications</h2>
+<ul>
+  <li>Foundations of Project Management – Coursera (2023)</li>
+  <li>Frontend Developer (React) – HackerRank (2024)</li>
+</ul>
+
+<h2>Languages</h2>
+<p>English (Fluent), Hindi (Fluent), Gujarati (Fluent)</p>
 
 <script>
   const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) document.documentElement.setAttribute("data-theme", savedTheme);
-  else if (window.matchMedia("(prefers-color-scheme: dark)").matches)
+  if (savedTheme) {
+    document.documentElement.setAttribute("data-theme", savedTheme);
+  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
     document.documentElement.setAttribute("data-theme", "dark");
+  }
 
   function toggleTheme() {
     const current = document.documentElement.getAttribute("data-theme");

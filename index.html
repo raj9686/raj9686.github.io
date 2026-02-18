@@ -1,192 +1,205 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
   <meta charset="UTF-8" />
   <title>Rajesh Gauswami | Team Lead | Full Stack Developer</title>
-  <meta name="description" content="Team Lead and Senior Full Stack Developer with 8+ years of experience in NodeJS, NestJS, ReactJS, TypeScript, AWS, and GCP." />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Team Lead & Senior Full Stack Developer with strong product ownership and modern UI expertise." />
+
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
 
   <style>
-    :root {
-      --bg: #ffffff;
-      --text: #000000;
-      --muted: #444;
-      --border: #000;
-      --btn-bg: #f3f3f3;
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: all 0.8s ease;
     }
-
-    [data-theme="dark"] {
-      --bg: #0f172a;
-      --text: #e5e7eb;
-      --muted: #9ca3af;
-      --border: #374151;
-      --btn-bg: #1f2937;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 40px;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.5;
-      font-size: 14px;
-      transition: all 0.2s ease;
-    }
-
-    h1 { font-size: 26px; margin-bottom: 5px; }
-    h2 {
-      font-size: 16px;
-      margin-top: 22px;
-      margin-bottom: 6px;
-      border-bottom: 1px solid var(--border);
-    }
-    h3 { font-size: 14px; margin: 10px 0 2px; }
-    p { margin: 4px 0; }
-    ul { margin: 6px 0 10px 18px; }
-    li { margin-bottom: 4px; }
-    .muted { font-size: 13px; color: var(--muted); }
-
-    .theme-toggle {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      padding: 6px 10px;
-      border: 1px solid var(--border);
-      background: var(--btn-bg);
-      color: var(--text);
-      cursor: pointer;
-      font-size: 12px;
-      border-radius: 4px;
+    .reveal.show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
-<body>
 
-<button class="theme-toggle" onclick="toggleTheme()">🌙 / ☀️</button>
+<body class="bg-gradient-to-br from-slate-900 via-slate-950 to-black text-slate-200">
 
-<h1>Rajesh Gauswami</h1>
-<p>
-  Team Lead | Senior Full Stack Developer (MERN)<br/>
-  Surat, Gujarat, India<br/>
-  Phone: +91 78780 09686 | Email: mr.gauswami@gmail.com
-</p>
+<!-- THEME TOGGLE -->
+<button onclick="toggleTheme()"
+  class="fixed top-5 right-5 z-50 px-4 py-2 rounded-full bg-white/10 backdrop-blur border border-white/10 text-sm hover:scale-105 transition">
+  🌙 / ☀️
+</button>
 
-<h2>Professional Summary</h2>
-<p>
-  Team Lead and Senior Full Stack Developer with 8+ years of experience building
-  scalable, secure, and high-performance applications. Strong expertise in NodeJS,
-  NestJS, ReactJS, TypeScript, and cloud platforms (AWS & GCP). Proven ability to lead
-  remote teams, own system architecture, modernize legacy platforms, and deliver
-  business-critical products end-to-end.
-</p>
+<div class="max-w-6xl mx-auto px-6 py-16">
 
-<h2>Technical Skills</h2>
-<p>
-  <strong>Languages & Frameworks:</strong> JavaScript, TypeScript, NodeJS, NestJS, ReactJS, NextJS, Express<br/>
-  <strong>Databases:</strong> PostgreSQL, MySQL, MongoDB, FaunaDB<br/>
-  <strong>Cloud & DevOps:</strong> AWS (Lambda, EC2, S3, Elastic Beanstalk, SQS, SNS), GCP, Docker, Serverless<br/>
-  <strong>Architecture & Practices:</strong> REST APIs, Microservices, JWT, OAuth, CI/CD, Jest, Mocha<br/>
-  <strong>Leadership:</strong> Team Leadership, Dev-Side Product Ownership, Code Reviews, Mentoring, Agile/Scrum
-</p>
+  <!-- HERO -->
+  <section class="mb-24 reveal">
+    <h1 class="text-5xl font-bold bg-gradient-to-r from-indigo-400 to-cyan-400 bg-clip-text text-transparent">
+      Rajesh Gauswami
+    </h1>
+    <p class="mt-4 text-lg text-slate-400 max-w-3xl">
+      Team Lead & Senior Full Stack Developer with 8+ years of experience building
+      scalable systems, modernizing legacy platforms, and leading products from
+      the engineering side in fully remote environments.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-6 text-sm text-slate-400">
+      <span>📍 Surat, India</span>
+      <span>📧 mr.gauswami@gmail.com</span>
+      <span>📞 +91 78780 09686</span>
+    </div>
+  </section>
 
-<h2>Professional Experience</h2>
+  <!-- SKILLS -->
+  <section class="mb-24 reveal">
+    <h2 class="text-xl font-semibold mb-6">Core Skills</h2>
+    <div class="flex flex-wrap gap-3">
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">NodeJS</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">NestJS</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">ReactJS</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">TypeScript</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">PostgreSQL</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">MySQL</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">MongoDB</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">AWS</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">GCP</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">Docker</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">Microservices</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">Product Ownership</span>
+      <span class="px-4 py-2 rounded-full bg-white/10 border border-white/10">Team Leadership</span>
+    </div>
+  </section>
 
-<h3>Team Lead</h3>
-<p class="muted">Deel | Remote | Mar 2025 – Present</p>
-<ul>
-  <li>Leading redevelopment of AstutePayroll platform using PERN stack (PostgreSQL, Express, ReactJS, NodeJS).</li>
-  <li>Acting as development-side product owner driving architecture, feature planning, and execution.</li>
-  <li>Modernizing legacy payroll systems for scalability, performance, and compliance readiness.</li>
-  <li>Mentoring engineers, conducting code reviews, and enforcing coding standards.</li>
-  <li>Collaborating with product, QA, and stakeholders in a fully remote environment.</li>
-</ul>
+  <!-- EXPERIENCE TIMELINE -->
+  <section class="mb-24">
+    <h2 class="text-xl font-semibold mb-12 reveal">Experience</h2>
 
-<h3>Senior Software Engineer</h3>
-<p class="muted">Vendavo | Remote | May 2024 – Mar 2025</p>
-<ul>
-  <li>Worked on Rebate and Channel Management (RCM) platform.</li>
-  <li>Improved payment processing, parallel execution, and billback automation.</li>
-  <li>Resolved critical production issues and optimized system performance.</li>
-  <li>Contributed to architectural decisions and coding standardization.</li>
-</ul>
+    <div class="relative border-l border-white/10 pl-10 space-y-16">
 
-<h3>Senior Software Engineer</h3>
-<p class="muted">32Co | Remote (London) | Jun 2022 – Mar 2024</p>
-<ul>
-  <li>Backend development using NestJS and NodeJS for healthcare platforms.</li>
-  <li>Designed scalable APIs and database schemas.</li>
-  <li>Worked on AWS Lambda and serverless infrastructure.</li>
-</ul>
+      <div class="reveal">
+        <h3 class="font-semibold text-lg">Team Lead — Deel</h3>
+        <p class="text-sm text-slate-400">Remote · Mar 2025 – Present</p>
+        <ul class="mt-4 list-disc list-inside text-slate-300">
+          <li>Leading redevelopment of AstutePayroll using PERN stack (PostgreSQL, Express, ReactJS, NodeJS).</li>
+          <li>Acting as development-side product owner driving architecture and feature planning.</li>
+          <li>Modernizing payroll systems for scalability, performance, and compliance.</li>
+          <li>Mentoring engineers and enforcing coding and architectural standards.</li>
+        </ul>
+      </div>
 
-<h3>Team Lead | Principal Software Engineer</h3>
-<p class="muted">Spacecode Technologies | Remote (Geneva) | Nov 2017 – Jun 2022</p>
-<ul>
-  <li>Led development of multiple enterprise products across healthcare, jewelry, and finance domains.</li>
-  <li>Designed RFID & IoT-based systems with backend services and dashboards.</li>
-  <li>Owned system architecture, database design, and delivery timelines.</li>
-  <li>Managed cross-functional teams and client communication.</li>
-</ul>
+      <div class="reveal">
+        <h3 class="font-semibold text-lg">Senior Software Engineer — Vendavo</h3>
+        <p class="text-sm text-slate-400">Remote · May 2024 – Mar 2025</p>
+        <ul class="mt-4 list-disc list-inside text-slate-300">
+          <li>Worked on enterprise Rebate & Channel Management platform.</li>
+          <li>Improved payment processing, parallel execution, and billback automation.</li>
+          <li>Resolved critical production issues and optimized system performance.</li>
+        </ul>
+      </div>
 
-<h3>Software Engineer</h3>
-<p class="muted">Atologist Technologies | Surat | Sep 2016 – Oct 2017</p>
+      <div class="reveal">
+        <h3 class="font-semibold text-lg">Senior Software Engineer — 32Co</h3>
+        <p class="text-sm text-slate-400">Remote (London) · Jun 2022 – Mar 2024</p>
+        <ul class="mt-4 list-disc list-inside text-slate-300">
+          <li>Backend development using NestJS and NodeJS for healthcare platforms.</li>
+          <li>Designed scalable APIs and database schemas.</li>
+          <li>Worked with AWS Lambda and serverless architecture.</li>
+        </ul>
+      </div>
 
-<h3>Software Engineer</h3>
-<p class="muted">Azilen Technologies Pvt. Ltd | Ahmedabad | May 2016 – Aug 2016</p>
+      <div class="reveal">
+        <h3 class="font-semibold text-lg">Team Lead / Principal Software Engineer — Spacecode Technologies</h3>
+        <p class="text-sm text-slate-400">Remote (Geneva) · Nov 2017 – Jun 2022</p>
+        <ul class="mt-4 list-disc list-inside text-slate-300">
+          <li>Led multiple enterprise products across healthcare, fintech, and IoT domains.</li>
+          <li>Owned system architecture, database design, and delivery.</li>
+          <li>Built RFID and hardware-integrated platforms.</li>
+        </ul>
+      </div>
 
-<h2>Projects</h2>
-<ul>
-  <li>
-    <strong>AstutePayroll (Deel):</strong> Redeveloping payroll platform using PERN stack.
-    Leading architecture, feature planning, and execution from development side.
-  </li>
-  <li>
-    <strong>Rebate & Channel Management (Vendavo):</strong> NodeJS, EXTJS, MySQL, MongoDB –
-    enterprise-grade rebate and payout management system.
-  </li>
-  <li>
-    <strong>32Co Platform:</strong> NestJS, ReactJS, AWS Lambda – clinician enablement platform.
-  </li>
-  <li>
-    <strong>BloodSpace Visibility:</strong> RFID-based blood bank tracking system using NestJS, MongoDB, GCP.
-  </li>
-  <li>
-    <strong>JewelTrace & Infinity Visibility:</strong> Inventory and loan value tracking systems.
-  </li>
-</ul>
+      <div class="reveal">
+        <h3 class="font-semibold text-lg">Software Engineer — Atologist Technologies</h3>
+        <p class="text-sm text-slate-400">Surat · Sep 2016 – Oct 2017</p>
+      </div>
 
-<h2>Education</h2>
-<p>
-  <strong>Master of Computer Application (2016)</strong><br/>
-  Gujarat Technical University, Ahmedabad
-</p>
-<p>
-  <strong>Bachelor of Computer Application (2014)</strong><br/>
-  MKBHU, Bhavnagar
-</p>
+      <div class="reveal">
+        <h3 class="font-semibold text-lg">Software Engineer — Azilen Technologies</h3>
+        <p class="text-sm text-slate-400">Ahmedabad · May 2016 – Aug 2016</p>
+      </div>
 
-<h2>Certifications</h2>
-<ul>
-  <li>Foundations of Project Management – Coursera (2023)</li>
-  <li>Frontend Developer (React) – HackerRank (2024)</li>
-</ul>
+    </div>
+  </section>
 
-<h2>Languages</h2>
-<p>English (Fluent), Hindi (Fluent), Gujarati (Fluent)</p>
+  <!-- PROJECTS -->
+  <section class="reveal">
+    <h2 class="text-xl font-semibold mb-8">Projects</h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+
+      <div class="p-6 bg-white/10 border border-white/10 rounded-xl">
+        <h3 class="font-semibold">AstutePayroll (Deel)</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          Payroll platform redevelopment using PERN stack.
+          Led architecture, feature planning, and execution from dev side.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white/10 border border-white/10 rounded-xl">
+        <h3 class="font-semibold">Rebate & Channel Management (Vendavo)</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          Enterprise rebate and payout optimization platform.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white/10 border border-white/10 rounded-xl">
+        <h3 class="font-semibold">32Co Platform</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          Clinician enablement platform with NestJS backend and serverless AWS infrastructure.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white/10 border border-white/10 rounded-xl">
+        <h3 class="font-semibold">BloodSpace Visibility</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          RFID-based blood bank tracking system across hospital CCP points.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white/10 border border-white/10 rounded-xl">
+        <h3 class="font-semibold">JewelTrace</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          Jewelry inventory, billing, and operations management platform.
+        </p>
+      </div>
+
+      <div class="p-6 bg-white/10 border border-white/10 rounded-xl">
+        <h3 class="font-semibold">Infinity Visibility</h3>
+        <p class="text-sm text-slate-400 mt-2">
+          Diamond loan value tracking and inventory validation system.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
 
 <script>
-  const savedTheme = localStorage.getItem("theme");
-  if (savedTheme) {
-    document.documentElement.setAttribute("data-theme", savedTheme);
-  } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-    document.documentElement.setAttribute("data-theme", "dark");
+  function toggleTheme() {
+    document.documentElement.classList.toggle("dark");
   }
 
-  function toggleTheme() {
-    const current = document.documentElement.getAttribute("data-theme");
-    const next = current === "dark" ? "light" : "dark";
-    document.documentElement.setAttribute("data-theme", next);
-    localStorage.setItem("theme", next);
-  }
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) entry.target.classList.add("show");
+    });
+  }, { threshold: 0.15 });
+
+  document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
 </script>
 
 </body>

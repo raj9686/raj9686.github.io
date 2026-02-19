@@ -494,6 +494,89 @@
         background: var(--accent);
       }
 
+      .timeline-duration {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-family: 'JetBrains Mono', monospace;
+        color: var(--accent-cyan);
+        background: rgba(34, 211, 238, 0.06);
+        border: 1px solid rgba(34, 211, 238, 0.1);
+        margin-left: 8px;
+      }
+
+      .timeline-type {
+        display: inline-block;
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-left: 4px;
+      }
+
+      .timeline-summary {
+        font-size: 14px;
+        color: var(--text-secondary);
+        line-height: 1.7;
+        margin-bottom: 14px;
+        padding-bottom: 14px;
+        border-bottom: 1px solid var(--border);
+      }
+
+      .timeline-skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 14px;
+      }
+
+      .timeline-skill-tag {
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 11px;
+        font-family: 'JetBrains Mono', monospace;
+        color: var(--text-muted);
+        background: rgba(255, 255, 255, 0.04);
+        border: 1px solid rgba(255, 255, 255, 0.04);
+      }
+
+      .timeline-sub-roles {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .sub-role {
+        padding-top: 16px;
+        border-top: 1px solid var(--border);
+      }
+
+      .sub-role-title {
+        font-size: 15px;
+        font-weight: 600;
+        margin-bottom: 4px;
+      }
+
+      .sub-role-meta {
+        display: flex;
+        gap: 12px;
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-bottom: 10px;
+      }
+
+      .education-grade {
+        display: inline-block;
+        padding: 3px 10px;
+        border-radius: 6px;
+        font-size: 12px;
+        font-family: 'JetBrains Mono', monospace;
+        color: var(--accent-cyan);
+        background: rgba(34, 211, 238, 0.06);
+        border: 1px solid rgba(34, 211, 238, 0.1);
+        margin-top: 10px;
+      }
+
       /* --- Projects --- */
       .projects-grid {
         display: grid;
@@ -582,13 +665,24 @@
       }
 
       /* --- Education --- */
+      .education-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        gap: 16px;
+      }
+
       .education-card {
         padding: 28px;
         border-radius: 16px;
         border: 1px solid var(--border);
         background: var(--bg-card);
         backdrop-filter: blur(10px);
-        max-width: 500px;
+        transition: all 0.3s ease;
+      }
+
+      .education-card:hover {
+        border-color: rgba(99, 102, 241, 0.15);
+        transform: translateY(-3px);
       }
 
       .education-degree {
@@ -606,6 +700,41 @@
         font-size: 13px;
         color: var(--text-muted);
         margin-top: 8px;
+      }
+
+      /* --- Download Button --- */
+      .btn-download {
+        display: inline-flex;
+        align-items: center;
+        gap: 10px;
+        padding: 12px 28px;
+        border-radius: 12px;
+        border: 1px solid rgba(99, 102, 241, 0.3);
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.12), rgba(34, 211, 238, 0.08));
+        color: var(--text-primary);
+        font-size: 14px;
+        font-weight: 600;
+        font-family: inherit;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        backdrop-filter: blur(10px);
+        letter-spacing: 0.2px;
+      }
+
+      .btn-download:hover {
+        border-color: rgba(99, 102, 241, 0.5);
+        background: linear-gradient(135deg, rgba(99, 102, 241, 0.2), rgba(34, 211, 238, 0.14));
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(99, 102, 241, 0.15);
+      }
+
+      .btn-download svg {
+        transition: transform 0.3s ease;
+      }
+
+      .btn-download:hover svg {
+        transform: translateY(2px);
       }
 
       /* --- Footer --- */
@@ -790,7 +919,8 @@
       @media print {
         nav,
         #grid-bg,
-        .orb-cyan {
+        .orb-cyan,
+        .btn-download {
           display: none;
         }
         body {
@@ -853,9 +983,12 @@
             </h1>
 
             <p class="hero-description reveal reveal-delay-2">
-              Team Lead & Senior Full Stack Developer with 8+ years of experience building scalable
-              systems, modernizing legacy platforms, and leading products from the engineering side
-              in fully remote environments.
+              Team Lead with 9+ years in Full Stack Development, specializing in the MERN stack
+              (Node.js, React.js, MongoDB, MySQL) and cloud platforms like AWS and GCP. Experienced
+              in leading teams to deliver impactful healthcare and IoT solutions, with focus on
+              scalability, security, and reliability. Certified in Project Management and React
+              Development, holding a Master’s in Computer Applications. Passionate about driving
+              innovation and delivering high-quality solutions.
             </p>
           </div>
 
@@ -913,6 +1046,21 @@
               />
             </svg>
             +91 78780 09686
+          </a>
+          <a class="btn-download" onclick="window.print()" href="javascript:void(0)">
+            <svg
+              width="16"
+              height="16"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4" />
+              <polyline points="7 10 12 15 17 10" />
+              <line x1="12" y1="15" x2="12" y2="3" />
+            </svg>
+            Download Resume
           </a>
         </div>
       </section>
@@ -986,6 +1134,7 @@
         </div>
 
         <div class="timeline">
+          <!-- Deel -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
@@ -993,24 +1142,36 @@
                 Team Lead <span class="timeline-company">@ Deel</span>
               </div>
               <div class="timeline-meta">
-                <span>Remote</span>
+                <span>India &middot; Remote</span>
                 <span>Mar 2025 &mdash; Present</span>
+                <span class="timeline-duration">1 yr</span>
               </div>
+              <p class="timeline-summary">
+                Technical Lead driving development of scalable, high-quality applications using
+                Node.js, ReactJS, TypeScript, and NestJS. Combines technical leadership with active
+                coding responsibilities.
+              </p>
               <ul class="timeline-list">
+                <li>Design, develop, and deliver robust backend services and APIs.</li>
+                <li>Provide technical guidance and mentorship to team members.</li>
+                <li>Conduct code reviews and enforce coding standards and best practices.</li>
                 <li>
-                  Leading redevelopment of AstutePayroll using PERN stack (PostgreSQL, Express,
-                  ReactJS, NodeJS).
+                  Collaborate with product and design teams to deliver exceptional user experiences.
                 </li>
-                <li>
-                  Acting as development-side product owner driving architecture and feature
-                  planning.
-                </li>
-                <li>Modernizing payroll systems for scalability, performance, and compliance.</li>
-                <li>Mentoring engineers and enforcing coding and architectural standards.</li>
+                <li>Lead technical planning and ensure long-term system health.</li>
+                <li>Promote Agile methodologies, continuous improvement, and knowledge sharing.</li>
               </ul>
+              <div class="timeline-skills">
+                <span class="timeline-skill-tag">Node.js</span>
+                <span class="timeline-skill-tag">React</span>
+                <span class="timeline-skill-tag">TypeScript</span>
+                <span class="timeline-skill-tag">NestJS</span>
+                <span class="timeline-skill-tag">Team Leadership</span>
+              </div>
             </div>
           </div>
 
+          <!-- Vendavo -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
@@ -1018,78 +1179,206 @@
                 Senior Software Engineer <span class="timeline-company">@ Vendavo</span>
               </div>
               <div class="timeline-meta">
-                <span>Remote</span>
+                <span>Bengaluru, India &middot; Remote</span>
                 <span>May 2024 &mdash; Mar 2025</span>
+                <span class="timeline-duration">11 mos</span>
               </div>
+              <p class="timeline-summary">
+                RCM (Revenue & Commercial Management) by Vendavo is a sophisticated platform
+                designed to optimize revenue and enhance commercial decision-making. Offers tools to
+                analyze market data, predict trends, and support strategic pricing and margin
+                management.
+              </p>
               <ul class="timeline-list">
-                <li>Worked on enterprise Rebate & Channel Management platform.</li>
+                <li>Built and optimized enterprise Rebate & Channel Management platform.</li>
                 <li>Improved payment processing, parallel execution, and billback automation.</li>
                 <li>Resolved critical production issues and optimized system performance.</li>
               </ul>
+              <div class="timeline-skills">
+                <span class="timeline-skill-tag">Node.js</span>
+                <span class="timeline-skill-tag">Microservices</span>
+                <span class="timeline-skill-tag">PostgreSQL</span>
+              </div>
             </div>
           </div>
 
+          <!-- 32Co -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-role">
-                Senior Software Engineer <span class="timeline-company">@ 32Co</span>
+                Full Stack Engineer (MERN) <span class="timeline-company">@ 32Co</span>
               </div>
               <div class="timeline-meta">
-                <span>Remote &middot; London</span>
+                <span>London, UK &middot; Remote</span>
                 <span>Jun 2022 &mdash; Mar 2024</span>
+                <span class="timeline-duration">1 yr 10 mos</span>
               </div>
+              <p class="timeline-summary">
+                Contributed to the transformation of collaborative healthcare at 32Co, a company
+                founded by clinicians to overcome the industry-wide challenge of limited access to
+                upskilling and mentorship opportunities.
+              </p>
               <ul class="timeline-list">
-                <li>Backend development using NestJS and NodeJS for healthcare platforms.</li>
-                <li>Designed scalable APIs and database schemas.</li>
-                <li>Worked with AWS Lambda and serverless architecture.</li>
+                <li>
+                  Leveraged the MERN stack (MongoDB, Express, React, Node.js) to create innovative
+                  solutions.
+                </li>
+                <li>
+                  Developed robust and user-friendly web applications empowering healthcare
+                  professionals globally.
+                </li>
+                <li>
+                  Backend development using NestJS and NodeJS with serverless AWS infrastructure.
+                </li>
               </ul>
+              <div class="timeline-skills">
+                <span class="timeline-skill-tag">MongoDB</span>
+                <span class="timeline-skill-tag">Express</span>
+                <span class="timeline-skill-tag">React</span>
+                <span class="timeline-skill-tag">Node.js</span>
+                <span class="timeline-skill-tag">AWS Lambda</span>
+                <span class="timeline-skill-tag">NestJS</span>
+              </div>
             </div>
           </div>
 
+          <!-- Spacecode Technologies -->
           <div class="timeline-item reveal">
             <div class="timeline-dot"></div>
             <div class="timeline-card">
               <div class="timeline-role">
-                Team Lead / Principal Engineer
-                <span class="timeline-company">@ Spacecode Technologies</span>
+                Full-time <span class="timeline-company">@ Spacecode Technologies</span>
               </div>
               <div class="timeline-meta">
-                <span>Remote &middot; Geneva</span>
+                <span>Remote</span>
                 <span>Nov 2017 &mdash; Jun 2022</span>
+                <span class="timeline-duration">4 yrs 8 mos</span>
+              </div>
+
+              <div class="timeline-sub-roles">
+                <div class="sub-role">
+                  <div class="sub-role-title">Team Lead | PM</div>
+                  <div class="sub-role-meta">
+                    <span>Remote</span>
+                    <span>Nov 2019 &mdash; Jun 2022 &middot; 2 yrs 8 mos</span>
+                  </div>
+                  <ul class="timeline-list">
+                    <li>
+                      Drove development, implementation, training, and support of enterprise project
+                      management methodology.
+                    </li>
+                    <li>
+                      Led large cross-functional teams in deployment of enterprise-wide projects and
+                      programs.
+                    </li>
+                    <li>
+                      Directed multiple projects as project manager, leading internal staff and
+                      external vendors in delivering business solutions.
+                    </li>
+                  </ul>
+                  <div class="timeline-skills">
+                    <span class="timeline-skill-tag">Software Architecture</span>
+                    <span class="timeline-skill-tag">Problem Solving</span>
+                    <span class="timeline-skill-tag">Project Management</span>
+                  </div>
+                </div>
+
+                <div class="sub-role">
+                  <div class="sub-role-title">MERN Stack Developer (Back-end Heavy) | DevOps</div>
+                  <div class="sub-role-meta">
+                    <span>Remote</span>
+                    <span>Nov 2018 &mdash; Jun 2022 &middot; 3 yrs 8 mos</span>
+                  </div>
+                  <ul class="timeline-list">
+                    <li>
+                      Excelled as a Full Stack web developer with proficiency spanning the MERN
+                      Stack (React.js, Node.js/Express, MongoDB/SQL Server).
+                    </li>
+                    <li>
+                      Employed design patterns like SOLID principles, and expertise in Socket.io for
+                      real-time applications.
+                    </li>
+                    <li>
+                      Ensured code quality with Test-driven Development (TDD) using Mocha and Chai.
+                    </li>
+                    <li>
+                      Hands-on experience with Docker and Ansible, Agile methodologies, and GIT
+                      version control.
+                    </li>
+                  </ul>
+                  <div class="timeline-skills">
+                    <span class="timeline-skill-tag">React.js</span>
+                    <span class="timeline-skill-tag">Node.js</span>
+                    <span class="timeline-skill-tag">Docker</span>
+                    <span class="timeline-skill-tag">Socket.io</span>
+                    <span class="timeline-skill-tag">TDD</span>
+                  </div>
+                </div>
+
+                <div class="sub-role">
+                  <div class="sub-role-title">Senior Software Engineer | Android | NodeJS</div>
+                  <div class="sub-role-meta">
+                    <span>Surat, Gujarat</span>
+                    <span>Nov 2017 &mdash; Oct 2018 &middot; 1 yr</span>
+                  </div>
+                  <ul class="timeline-list">
+                    <li>
+                      Modified existing software to correct errors, adapt to new hardware, and
+                      upgrade interfaces for improved performance.
+                    </li>
+                    <li>
+                      Analyzed information to recommend and plan installation of new systems or
+                      modification of existing systems.
+                    </li>
+                    <li>
+                      Developed data architecture design to enable analysts to perform targeted
+                      customer analysis.
+                    </li>
+                    <li>
+                      Directed software system testing, validation procedures, and user training.
+                    </li>
+                  </ul>
+                  <div class="timeline-skills">
+                    <span class="timeline-skill-tag">Node.js</span>
+                    <span class="timeline-skill-tag">Android</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Atologist Infotech -->
+          <div class="timeline-item reveal">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <div class="timeline-role">
+                Software Engineer &middot; Android
+                <span class="timeline-company">@ Atologist Infotech</span>
+              </div>
+              <div class="timeline-meta">
+                <span>Surat, Gujarat</span>
+                <span>Sep 2016 &mdash; Oct 2017</span>
+                <span class="timeline-duration">1 yr 2 mos</span>
               </div>
               <ul class="timeline-list">
                 <li>
-                  Led multiple enterprise products across healthcare, fintech, and IoT domains.
+                  Applied SDLC for applications including Requirements Analysis, Design,
+                  Development, Testing, and Maintenance.
                 </li>
-                <li>Owned system architecture, database design, and delivery.</li>
-                <li>Built RFID and hardware-integrated platforms.</li>
+                <li>
+                  Designed and developed adaptive UI components and Widgets for Android phones with
+                  different screen resolutions.
+                </li>
+                <li>
+                  Experience with database storage (SQLite, Realm), RESTful web services, and Google
+                  Play distribution.
+                </li>
               </ul>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-role">
-                Software Engineer <span class="timeline-company">@ Atologist Technologies</span>
-              </div>
-              <div class="timeline-meta">
-                <span>Surat</span>
-                <span>Sep 2016 &mdash; Oct 2017</span>
-              </div>
-            </div>
-          </div>
-
-          <div class="timeline-item reveal">
-            <div class="timeline-dot"></div>
-            <div class="timeline-card">
-              <div class="timeline-role">
-                Software Engineer <span class="timeline-company">@ Azilen Technologies</span>
-              </div>
-              <div class="timeline-meta">
-                <span>Ahmedabad</span>
-                <span>May 2016 &mdash; Aug 2016</span>
+              <div class="timeline-skills">
+                <span class="timeline-skill-tag">Android</span>
+                <span class="timeline-skill-tag">SQLite</span>
+                <span class="timeline-skill-tag">REST APIs</span>
               </div>
             </div>
           </div>
@@ -1193,10 +1482,22 @@
           <div class="section-line"></div>
         </div>
 
-        <div class="education-card reveal">
-          <div class="education-degree">Bachelor of Computer Application (BCA)</div>
-          <div class="education-school">Veer Narmad South Gujarat University, Surat</div>
-          <div class="education-year">2013 &mdash; 2016</div>
+        <div class="education-grid">
+          <div class="education-card reveal">
+            <div class="education-degree">Master of Computer Applications (MCA)</div>
+            <div class="education-school">
+              Shri Chimanbhai Patel Post Graduate Institute of Computer Applications, Ahmedabad
+            </div>
+            <div class="education-year">2015 &mdash; 2016</div>
+            <div class="education-grade">Grade: 7.9</div>
+          </div>
+
+          <div class="education-card reveal">
+            <div class="education-degree">Bachelor in Computer Application (BCA)</div>
+            <div class="education-school">Shree Swaminarayan College of Computer Science</div>
+            <div class="education-year">2011 &mdash; 2014</div>
+            <div class="education-grade">Grade: A</div>
+          </div>
         </div>
       </section>
 
